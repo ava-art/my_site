@@ -1,0 +1,50 @@
+.nav__list{
+    display: flex;
+}
+
+.nav__item{
+    position: relative;
+    &:hover{
+        .nav__link{
+            background-color: $blue;
+        }
+
+        >.subnav{
+            display: block;
+        }
+    }
+}
+
+.nav__link{
+    display: block;
+    
+    padding: 1.35rem;
+    font-size: 1.1rem;
+    line-height: 1.3rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: $white;
+
+    transition: background-color .1s linear;
+
+    &.has-subnav{
+        position: relative;
+        padding-right: 3.5rem;
+        &:after{
+            content: "";
+            display: block;
+            position: absolute;
+            border-style: solid;
+            margin-top: 2px;
+            border-width: 6px 5px 0 5px;
+            border-color: $white transparent transparent transparent;
+            top: 50%;
+            right: 1.35rem;
+            transform: translateY(-50%);
+        }
+    }
+    &:hover{
+        background-color: $blue;
+    }
+}
+

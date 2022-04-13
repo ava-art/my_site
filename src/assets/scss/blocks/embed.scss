@@ -1,0 +1,22 @@
+.embed{
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;
+    box-shadow: 0 5px 20px rgba($black, .4);
+
+    &::before{
+        content: "";
+        display: block;
+        padding-top: 56.25%;
+    }
+
+    iframe, video, object, embed{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+    }
+
+}

@@ -1,0 +1,37 @@
+.pagination{
+    display: flex;
+    justify-content: center;
+    margin-top: 8rem;
+   
+}
+
+.pagination__item{
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-color: #0D0D0D;
+    margin: 0 0.5rem;
+    text-align: center;
+    padding-top: 0.8rem;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color .2s linear;
+
+    box-shadow: 0 0 10px rgba($black, .15);
+    &:hover{
+        background-color: lighten(#0d0d0d, 2%);
+       
+    }
+
+}
+
+.pagination__link{
+    color: $white;
+    text-decoration: none;
+    
+}
+
+.pagination__item.active{
+    background-color: $blue;
+    box-shadow: 0 0 10px rgba($blue, .15);
+}

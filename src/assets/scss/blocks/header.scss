@@ -1,0 +1,22 @@
+.header{
+    display: flex;
+
+    width: calc(100% - #{$sidebar-width});
+    position: fixed;
+
+    background-color: #0d0d0d;
+    box-shadow: 0 5px 12px rgba(#0d0d0d, .25);
+    top: 0;
+    right: 0;
+    z-index: $z-index-header;
+}
+
+.header_left{
+    width: 60%;
+}
+.header_right{
+    width: 40%;
+    display: flex;
+    justify-content: flex-end;
+    
+}
