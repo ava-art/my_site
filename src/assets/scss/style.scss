@@ -22,8 +22,20 @@ body {
     "Apple Color Emoji", "Segoe UI Emoji",
     "Segoe UI Symbol";
     line-height: 1.5;
+
+    &.no-scroll{
+        overflow: hidden;
+    }
 }
 
+a{
+    color: inherit;
+    text-decoration: none;
+
+    &:hover{
+        text-decoration: underline;
+    }
+}
 
 /* Blocks */
 
@@ -43,3 +55,9 @@ body {
 @import "blocks/post";
 @import "blocks/embed";
 @import "blocks/pagination";
+@import "blocks/related";
+@import "blocks/form";
+@import "blocks/comments";
+@import "blocks/work";
+@import "blocks/cabinet";
+@import "blocks/modal";

@@ -16,24 +16,84 @@
     margin-top: 30px;
 
     box-shadow: 0 ;
+
     
+    
+
+    &:hover{
+        text-decoration: none;
+    }
 
     &--red{
         background-color: $red;
         box-shadow: 0 17px 7px -10px rgba($red, 0.2);
     
-    &:hover{
-        background-color: darken($red, 10%)
+    &:hover,&:focus{
+        background-color: darken($red, 10%);
+        text-decoration: none;
         
         }
     }
 
     &--blue{
         background-color: $blue;
+        box-shadow: 0 17px 7px -10px rgba($blue, 0.2);
         
-        &:hover{
+        &:hover,&:focus{
         background-color: darken($blue, 10%);
         
         }
     }
+}
+.btn--comments{
+    
+    border-radius: 5px;
+    padding: 0.7rem 1rem;
+
+    font-weight: 400;
+
+    margin-top: 1rem;
+}
+
+
+.btn-category{
+    margin-right: 1rem;
+    margin-top: 0;
+    margin: 0 1rem 1rem 0;
+    background-color: #EA8C1E;
+    font-size: 1.1rem;
+    font-weight: 400;
+    border-radius: 3px;
+    
+    &:hover{
+        background-color: darken(#EA8C1E, 10%);
+    }
+}
+
+.btn-work{
+    display: block;
+    
+    width: 12rem;
+    height: 3rem;
+    padding: 0.8rem 1.45rem;
+    margin-left: auto;
+    box-shadow: 0 5px 5px rgba($black, .10);
+}
+
+.btn--sm{
+    display: block;
+    margin-top: 0;
+    
+}
+
+.btn--auth{
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+}
+
+.btn--modal{
+    display: block;
+    margin-right: auto;
+    margin-top: 2rem;
 }

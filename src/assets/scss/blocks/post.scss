@@ -10,11 +10,24 @@
 .post__description{
     font-size: 1.4rem;
     color: #d2d2d2;
+
+    margin-bottom: 2rem;
+}
+
+.post__subtitle{
+    font-size: 1.6rem;
+    color: $white;
+    font-weight: 500;
+    margin-bottom: 2rem;
+    margin-top: 2.5rem;
 }
 
 .post__text{
     font-size: 1.4rem;
     color: $white;
+
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #1C1C1C;
         
         
 
@@ -46,9 +59,23 @@
         list-style-position: inside;
     }
 
+    img{
+        display: block;
+        max-width: 100%;
+        height: auto;
+    }
+
     table{
         margin-bottom: 2rem;
         width: 100%;
+    }
+    a{
+        color: $blue;
+        text-decoration: none;
+
+        &:hover{
+            text-decoration: underline;
+        }
     }
 
     p{
@@ -167,4 +194,10 @@
     }
 
     svg{
-        display: bl
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+}

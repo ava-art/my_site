@@ -1,0 +1,47 @@
+.related{
+    border-bottom: 1px solid #1C1C1C;
+
+    padding: 0 0 .5rem;
+}
+
+
+
+.related__list{
+    width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+}
+        
+.related__list-item{
+        width: 50%;
+        margin-bottom: 2rem;
+        padding-right: 2rem;
+}
+
+.related__list-date{
+    font-size: 1.2rem;
+            color: #828282;
+            font-weight: 400;
+}
+
+.related__list-title{
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: #F3EBA2;
+
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+
+        a{
+            color: inherit;
+            
+
+            &:hover{
+                color: darken(#F3EBA2, 20%);
+            }
+        }
+        
+}
+
+    
