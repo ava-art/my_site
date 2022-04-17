@@ -17,7 +17,9 @@
 
     box-shadow: 0 ;
 
-    
+    @include breakpoint($mobile-bp){
+        margin-top: 0;
+    }
     
 
     &:hover{
@@ -45,8 +47,10 @@
         }
     }
 }
+
+
 .btn--comments{
-    
+    display: block;
     border-radius: 5px;
     padding: 0.7rem 1rem;
 
@@ -57,6 +61,7 @@
 
 
 .btn-category{
+    display: inline-block;
     margin-right: 1rem;
     margin-top: 0;
     margin: 0 1rem 1rem 0;
@@ -78,11 +83,19 @@
     padding: 0.8rem 1.45rem;
     margin-left: auto;
     box-shadow: 0 5px 5px rgba($black, .10);
+
+    @include breakpoint($mobile-bp){
+        margin-left: 0;
+    }
 }
 
 .btn--sm{
     display: block;
     margin-top: 0;
+
+    @include breakpoint($mobile-bp){
+        margin: 1rem auto 0;
+    }
     
 }
 

@@ -8,14 +8,22 @@
 
 .related__list{
     width: 100%;
-        display: flex;
-        flex-wrap: wrap;
+    display: flex;
+    flex-wrap: wrap;
+
+    @include breakpoint($mobile-bp){
+        flex-direction: column;
+    }
 }
         
 .related__list-item{
         width: 50%;
         margin-bottom: 2rem;
         padding-right: 2rem;
+
+        @include breakpoint($mobile-bp){
+            width: 100%;
+        }
 }
 
 .related__list-date{

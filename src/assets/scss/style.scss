@@ -1,5 +1,6 @@
 @import "vars";
 @import "vendor/reset";
+@import "blocks/mixins";
 
 
 html {
@@ -23,7 +24,8 @@ body {
     "Segoe UI Symbol";
     line-height: 1.5;
 
-    &.no-scroll{
+    &.no-scroll,
+    &.show__sidebar{
         overflow: hidden;
     }
 }
@@ -43,6 +45,7 @@ a{
 @import "blocks/page";
 @import "blocks/header";
 @import "blocks/nav";
+@import "blocks/burger";
 @import "blocks/subnav";
 @import "blocks/search";
 @import "blocks/sidebar";
@@ -61,3 +64,4 @@ a{
 @import "blocks/work";
 @import "blocks/cabinet";
 @import "blocks/modal";
+

@@ -5,6 +5,20 @@
     display: flex;
     justify-content: space-between;
 
+
+
+    position: relative;
+    &::after{
+        content: "";
+        display: block;
+    width: 260px;
+    height: 1px;
+    background-color: #1c1c1c;
+    bottom: -1.5rem;
+    left: -8rem;
+    position: absolute;
+    }
+
     &--modal_share{
         width: 100%;
         margin: 0;
@@ -15,19 +29,34 @@
             margin: 0 0.75rem;
         }
     }
+
+    @include breakpoint($tablet-bp){
+        display: none;
+    }
+    
 }
 
-.hr{
-    display: block;
-    width: 260px;
-    height: 1px;
-    background-color: #1c1c1c;
-    margin: 0 auto;
-}
+
 
 .me_about{
     line-height: 18px;
     font-size: 12px;
     margin: 30px 20px;
+    position: relative;
+
+    &::after{
+        content: "";
+        display: block;
+    width: 260px;
+    height: 1px;
+    background-color: #1c1c1c;
+    bottom: -2.5rem;
+    left: 0;
+    position: absolute;
+    }
+
+    @include breakpoint($tablet-bp){
+        display: none;
+    }
     
 }

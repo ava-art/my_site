@@ -19,4 +19,11 @@
         color: rgba($white, .4);
     }
 
+    @include breakpoint($tablet-bp){
+        padding-top: 1rem;
+        padding-bottom: 0.9rem;
+
+        font-size: 1.6rem;
+    }
+
 }

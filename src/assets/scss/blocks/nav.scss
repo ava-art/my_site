@@ -1,5 +1,42 @@
+.nav{
+
+    @include breakpoint($tablet-bp){
+        display: none;
+    }
+
+    &--mobile{
+        display: none;
+        padding-left: 3rem;
+        padding-top: 4.5rem;
+        position: relative;
+
+        
+
+        &::before{
+            content: "";
+            display: block;
+            width: 27rem;
+            height: 1px;
+            background-color: #4e4e4e;
+            position: absolute;
+            left: 1.5rem;
+            top: 2rem;
+
+        }
+        
+        @include breakpoint($tablet-bp){
+            display: block;
+        }
+
+    }
+}
+
 .nav__list{
     display: flex;
+
+    @include breakpoint($tablet-bp){
+        flex-direction: column;
+    }
 }
 
 .nav__item{
@@ -7,12 +44,23 @@
     &:hover{
         .nav__link{
             background-color: $blue;
+
+            @include breakpoint($tablet-bp){
+                background-color: transparent;
+            }
         }
 
         >.subnav{
             display: block;
         }
     }
+
+    &.click{
+        >.subnav{
+            display: block;
+        }
+    }
+
 }
 
 .nav__link{
@@ -46,6 +94,16 @@
     &:hover{
         background-color: $blue;
         text-decoration: none;
+    }
+
+    @include breakpoint($tablet-bp){
+        font-size: 1.6rem;
+        font-weight: 300;
+        text-transform: none;
+
+        &.active{
+            color: #107EFF;
+        }
     }
 }
 

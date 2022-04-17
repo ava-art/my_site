@@ -1,9 +1,18 @@
 .cabinet{
     display: flex;
+
+    @include breakpoint($mobile-bp){
+        flex-direction: column-reverse;
+        align-items: center;
+    }
 }
 
 .cabinet__form{
     width: 34rem;
+
+    @include breakpoint($mobile-bp){
+        width: 26rem;
+    }
 }
 
 .cabinet__avatar{
@@ -13,6 +22,15 @@
     img{
         display: block;
         margin-bottom: 1.5rem;
+    }
+
+    @include breakpoint($mobile-bp){
+        padding: 0;
+        margin-bottom: 2rem;
+
+        img{
+            margin: 0 auto 1.5rem;
+        }
     }
 }
 .cabinet__file{
