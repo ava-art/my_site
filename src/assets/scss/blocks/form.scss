@@ -11,6 +11,11 @@
     &--modal{
         padding: 8rem;
         padding-bottom: 3rem;
+
+        @include breakpoint($mobile-bp){
+            padding-left: 3rem;
+            padding-right: 3rem;
+        }
         
     }
 }

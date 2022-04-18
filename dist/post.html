@@ -16,7 +16,7 @@
 </head>
 <body class="">
      
-<div class="page">
+<div class="page" id="page">
 
     
          <header class="header">
@@ -48,7 +48,7 @@
                          </li>
                      </ul>
                  </nav>
-                 <button class="burger active" type="button">
+                 <button class="burger active" type="button" id="sidebarToggle">
                      <span >Открыть навигацию</span>
                  </button>
          
@@ -70,7 +70,7 @@
              </div>
          </header>
          
-         <aside class="sidebar">
+         <aside class="sidebar" id="sidebar">
              <div class="sidebar_header">
                  <img src="assets/images/sidebar_header.jpg" alt="">
              </div>
@@ -85,8 +85,8 @@
                              <li class="nav__item">
                                  <a class="nav__link" href="index.html">Главная</a>
                              </li>
-                             <li class="nav__item click">
-                                 <a class="nav__link has-subnav " href="index.html">Статьи</a>
+                             <li class="nav__item" >
+                                 <span class="nav__link has-subnav ">Статьи</span>
                                  <ul class="subnav">
                                      <li>
                                          <a class="subnav__link" href="">Создание сайтов</a>
@@ -147,7 +147,7 @@
          
              <div class="sidebar_footer">
                  <a class="btn btn--red" href="works.html">Мои работы</a>
-                 <button class="btn btn--blue" type="button">Написать мне</button>
+                 <button class="btn btn--blue" data-modal="contact-modal" type="button">Написать мне</button>
          
          
              </div>
@@ -289,7 +289,8 @@
                         <h3 class="post__subtitle">Обсуждение</h3>
                         <form class="form" action="/" method="post">
                            <div class="form__group">
-                                <textarea class="form__control" name="comments-text" placeholder="Текст комментария"></textarea>
+                                <textarea class="form__control" name="comments-text" 
+                                placeholder="Текст комментария" data-autoresize></textarea>
                                 <span class="form__line" ></span>
                             </div>    
                                 <button class="btn btn--blue btn--comments" type="submit">Отправить</button>
@@ -345,8 +346,77 @@
 
 </div>
 
-<div class="modal">
-    <video class="story_video" src="" poster="/assets/images/poster_video1.jpg"></video>
+<div class="modal" id="story-modal">
+    <div class="modal__content modal__content--story">
+        <video class="modal__video" src="" poster="/assets/images/poster_video1.jpg"></video>
+
+    </div>
+</div><div class="modal" id="contact-modal">
+    <div class="modal__content">
+        <button class="modal__close" type="button" >
+        <img class="" src="/assets/images/close.svg" alt="Закрыть окно">
+        </button>
+        <form class="form form--modal" action="/" method="post" >
+
+            <div class="form__group form__group--md">
+                <input type="name" class="form__control" 
+                placeholder="Имя">
+                <span class="form__line form__line-input"></span>
+            </div>
+        
+            <div class="form__group form__group--md">
+                <input type="email" class="form__control" 
+                placeholder="Email">
+                <span class="form__line form__line-input"></span>
+            </div>
+
+            <div class="form__group">
+                <textarea class="form__control" name="comments-text"
+                 placeholder="Текст сообщения" data-autoresize></textarea>
+                <span class="form__line" ></span>
+            </div>    
+                <button class="btn btn--blue btn--comments btn--modal" 
+                type="submit">Отправить</button>
+
+        </form>
+
+        <div class="my_contacts">
+            <span class="mr1" >e-mail: <a href="mailto:Koshkadav@gmail.com">Koshkadav@gmailcom</a></span>
+            <span class="mr1">Тел: <a href="tel:+79384235698">+7 938 42-35-698</a> </span>
+        </div>
+    </div>
+</div><div class="modal">
+    <div class="modal__content">
+        <button class="modal__close" type="button" >
+        <img class="" src="/assets/images/close.svg" alt="Закрыть окно">
+        </button>
+        
+
+        <ul class="social social--modal_share">
+            <li class="social_item">
+                <a href="#" >
+                    <img src="/assets/images/share/vk.svg" alt="">
+                </a>
+            </li>
+            <li class="social_item">
+                <a href="#" >
+                    <img src="/assets/images/share/twitter.svg" alt="">
+                </a>
+            </li>
+            <li class="social_item">
+                <a href="#" >
+                    <img src="/assets/images/share/facebook.svg" alt="">
+                </a>
+            </li>
+            <li class="social_item">
+                <a href="#" >
+                    <img src="/assets/images/share/copy.svg" alt="">
+                </a>
+            </li>
+        </ul>
+
+
+    </div>
 </div>   
     <!-- JS-->
     <script src="assets/js/app.js"></script>
