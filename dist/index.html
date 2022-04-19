@@ -159,25 +159,25 @@
         <div class="container">
             <!-- Stories-->
             <div class="stories">
-                <div class="stories__item" data-modal="story-modal">
+                <div class="stories__item" data-modal="story-modal_1">
                     <img class="stories__preview"
                      src="/assets/images/stories/Stories_1.jpg" alt="">
                      <div class="stories__title">Отдыхаю на природе</div>
                      <time class="stories__date" datetime="2020-09-21">21.09.2020</time>
                 </div>
-                <div class="stories__item">
+                <div class="stories__item" data-modal="story-modal_2">
                     <img class="stories__preview"
                      src="/assets/images/stories/Stories_2.jpg" alt=""> 
                      <div class="stories__title">Оканчиваю сложный проект</div>
                      <time class="stories__date" datetime="2020-04-12">12.04.2020</time>
                 </div>
-                <div class="stories__item">
+                <div class="stories__item" data-modal="story-modal_3">
                     <img class="stories__preview"
                      src="/assets/images/stories/Stories_3.jpg" alt="">
                      <div class="stories__title">Переехал в новую квартиру</div>
                      <time class="stories__date" datetime="2019-11-15">15.11.2019</time>
                 </div>
-                <div class="stories__item">
+                <div class="stories__item" data-modal="story-modal_4">
                     <img class="stories__preview"
                      src="/assets/images/stories/Stories_4.jpg" alt="">
                      <div class="stories__title">Осень пришла</div>
@@ -217,6 +217,8 @@
                          Fusce arcu sodales lacinia eu auctor nunc nam id. Diam 
                          sit sed volutpat massa. Egestas ornare vel volutpat.
                     </p>
+            
+                    
                 </div>
                 <div class="post_footer">
                     <ul class="post__data">
@@ -347,10 +349,35 @@
 
 </div>
 
-<div class="modal" id="story-modal">
+<div class="modal" id="story-modal_1">
     <div class="modal__content modal__content--story">
-        <video class="modal__video" src="" poster="/assets/images/poster_video1.jpg"></video>
+        <video controls  width="100%" height="100%" preload="none" poster="/assets/images/poster_video1.jpg">
+            <source src="/assets/media/stori.webm" type="video/webm">
+          </video>
+    </div>
+</div>
 
+<div class="modal" id="story-modal_2">
+    <div class="modal__content modal__content--story">
+        <video controls  width="100%" height="100%" preload="none" poster="/assets/images/poster_video1.jpg">
+            <source src="/assets/media/stori.webm" type="video/webm">
+          </video>
+    </div>
+</div>
+
+<div class="modal" id="story-modal_3">
+    <div class="modal__content modal__content--story">
+        <video controls  width="100%" height="100%" preload="none" poster="/assets/images/poster_video1.jpg">
+            <source src="/assets/media/stori.webm" type="video/webm">
+          </video>
+    </div>
+</div>
+
+<div class="modal" id="story-modal_4">
+    <div class="modal__content modal__content--story">
+        <video controls  width="100%" height="100%" preload="none" poster="/assets/images/poster_video1.jpg">
+            <source src="/assets/media/stori.webm" type="video/webm">
+          </video>
     </div>
 </div><div class="modal" id="contact-modal">
     <div class="modal__content">
@@ -386,14 +413,16 @@
             <span class="mr1">Тел: <a href="tel:+79384235698">+7 938 42-35-698</a> </span>
         </div>
     </div>
-</div><div class="modal">
+</div><div class="modal" id="share-modal">
     <div class="modal__content">
-        <button class="modal__close" type="button" >
-        <img class="" src="/assets/images/close.svg" alt="Закрыть окно">
-        </button>
+        <button class="modal__close" type="button" id="share_close" >
+            <img class="" src="/assets/images/close.svg" alt="Закрыть окно">
+            </button>
         
+            
 
         <ul class="social social--modal_share">
+            
             <li class="social_item">
                 <a href="#" >
                     <img src="/assets/images/share/vk.svg" alt="">
@@ -420,6 +449,6 @@
     </div>
 </div>   
     <!-- JS-->
-    <script src="assets/js/app.js"></script>
+    <script src="assets/js/app.js?v=1"></script>
 </body>
 </html>

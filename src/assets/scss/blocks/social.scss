@@ -24,15 +24,14 @@
         margin: 0;
         justify-content: center;
         padding: 8rem;
+        
 
         li{
             margin: 0 0.75rem;
         }
     }
 
-    @include breakpoint($tablet-bp){
-        display: none;
-    }
+    
     
 }
 

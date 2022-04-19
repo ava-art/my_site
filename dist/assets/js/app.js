@@ -25,7 +25,17 @@ eval("const burger = document.getElementById('sidebarToggle');\r\nconst sidebar 
   \********************************/
 /***/ (function() {
 
-eval("\r\nconst modalBtn = document.querySelectorAll('[data-modal]');\r\nconst body = document.body;\r\nconst modalClose = document.querySelectorAll('.modal__close')\r\nconst modal = document.querySelectorAll('.modal')\r\n\r\nmodalBtn.forEach(item =>{\r\n    item.addEventListener('click', event => {\r\n        let $this = event.currentTarget;\r\n        let modalId = $this.getAttribute('data-modal');\r\n        let modal = document.getElementById(modalId);\r\n        let modalContent = modal.querySelector('.modal__content');\r\n\r\n        modalContent.addEventListener('click', event => {\r\n            event.stopPropagation();\r\n        }); \r\n\r\n        modal.classList.add('show');\r\n        body.classList.add('no-scroll');\r\n\r\n        setTimeout(function(){\r\n            modalContent.style.transform = 'none';\r\n            modalContent.style.opacity = '1';\r\n            \r\n            \r\n        }, 1);\r\n        modalContent.style.opacity = '0';\r\n        modalContent.style.transform = 'translateY(-50px)';\r\n    });\r\n});\r\n\r\nmodalClose.forEach(item =>{\r\n    item.addEventListener('click', event => {\r\n        let currentModal = event.currentTarget.closest('.modal');\r\n\r\n        closeModal(currentModal) \r\n    });\r\n});\r\n\r\nmodal.forEach(item =>{\r\n    item.addEventListener('click', event => {\r\n        let currentModal = event.currentTarget;\r\n\r\n        closeModal(currentModal)\r\n    });\r\n});\r\n\r\nfunction closeModal(currentModal){\r\n    currentModal.classList.remove('show');\r\n        body.classList.remove('no-scroll');\r\n\r\n}\n\n//# sourceURL=webpack://brainscloud/./src/assets/js/modal.js?");
+eval("const modalBtn = document.querySelectorAll('[data-modal]');\r\nconst body = document.body;\r\nconst modalClose = document.querySelectorAll('.modal__close')\r\nconst modal = document.querySelectorAll('.modal')\r\n\r\n\r\nmodalBtn.forEach(item =>{\r\n    item.addEventListener('click', event => {\r\n        let $this = event.currentTarget;\r\n        let modalId = $this.getAttribute('data-modal');\r\n        let modal = document.getElementById(modalId);\r\n        let modalContent = modal.querySelector('.modal__content');\r\n\r\n        modalContent.addEventListener('click', event => {\r\n            event.stopPropagation();\r\n        }); \r\n\r\n        modal.classList.add('show');\r\n        body.classList.add('no-scroll');\r\n\r\n        setTimeout(function(){\r\n            modalContent.style.transform = 'none';\r\n            modalContent.style.opacity = '1';\r\n            \r\n            \r\n        }, 1);\r\n        modalContent.style.opacity = '0';\r\n        modalContent.style.transform = 'translateY(-50px)';\r\n    });\r\n});\r\n\r\nmodalClose.forEach(item =>{\r\n    item.addEventListener('click', event => {\r\n        let currentModal = event.currentTarget.closest('.modal');\r\n\r\n        closeModal(currentModal) \r\n    });\r\n});\r\n\r\nmodal.forEach(item =>{\r\n    item.addEventListener('click', event => {\r\n        let currentModal = event.currentTarget;\r\n\r\n        closeModal(currentModal)\r\n    });\r\n});\r\n\r\nfunction closeModal(currentModal){\r\n    currentModal.classList.remove('show');\r\n        body.classList.remove('no-scroll');\r\n\r\n}\n\n//# sourceURL=webpack://brainscloud/./src/assets/js/modal.js?");
+
+/***/ }),
+
+/***/ "./src/assets/js/share.js":
+/*!********************************!*\
+  !*** ./src/assets/js/share.js ***!
+  \********************************/
+/***/ (function() {
+
+eval("const shareClose = document.getElementById('share_close');\r\n\r\n\n\n//# sourceURL=webpack://brainscloud/./src/assets/js/share.js?");
 
 /***/ }),
 
@@ -37,6 +47,17 @@ eval("\r\nconst modalBtn = document.querySelectorAll('[data-modal]');\r\nconst b
 
 eval("const textArea = document.querySelectorAll('[data-autoresize]')\r\n\r\n\r\ntextArea.forEach(item => {\r\n    let textAreaH = item.offsetHeight;\r\n\r\n    item.addEventListener('input', event =>{\r\n        let $this = event.target;\r\n\r\n        $this.style.height = textAreaH + 'px';\r\n        $this.style.height = $this.scrollHeight + 'px';\r\n    });\r\n});\n\n//# sourceURL=webpack://brainscloud/./src/assets/js/taxtarea.js?");
 
+/***/ }),
+
+/***/ "./src/assets/js/test.js":
+/*!*******************************!*\
+  !*** ./src/assets/js/test.js ***!
+  \*******************************/
+/***/ (function() {
+
+"use strict";
+eval("\r\n\n\n//# sourceURL=webpack://brainscloud/./src/assets/js/test.js?");
+
 /***/ })
 
 /******/ 	});
@@ -47,8 +68,10 @@ eval("const textArea = document.querySelectorAll('[data-autoresize]')\r\n\r\n\r\
 /******/ 	// This entry module can't be inlined because the eval devtool is used.
 /******/ 	__webpack_modules__["./src/assets/js/mobileNav.js"]();
 /******/ 	__webpack_modules__["./src/assets/js/modal.js"]();
-/******/ 	var __webpack_exports__ = {};
+/******/ 	__webpack_modules__["./src/assets/js/share.js"]();
 /******/ 	__webpack_modules__["./src/assets/js/taxtarea.js"]();
+/******/ 	var __webpack_exports__ = {};
+/******/ 	__webpack_modules__["./src/assets/js/test.js"]();
 /******/ 	
 /******/ })()
 ;
